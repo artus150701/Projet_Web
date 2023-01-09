@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+        <title>Commencer Hearthstone</title>
+        <link rel="icon" type="image/png" href="pictures/logo.png">
+
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/presentation.css">
+
+    </head>
+    <body>
+        <header>
+
+          <h1>Inscription</h1>
+
+        </header>
+
+        <nav>
+
+            <input type="checkbox" id="navBar" />
+            <label for="navBar" class="navBarLogo">
+              <img src=pictures/logoNav.png width="128" height="109" draggable="false" alt="Menu">
+            </label>
+
+            <div class="navBarList">
+
+              <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./carte.html">Les cartes</a></li>
+                <li><a href="./classe.html">Les classes</a></li>
+              </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="totalbox">
+
+          <div class="boxInscription">
+
+            <p>Attention l'incription demande l'utilisation de Javascript.</p>
+
+            <form method="post" action="/htbin/register.py" name="inscription">
+
+              <ul>
+                <li>
+                  Nom: <input type="text" name="lastname" id="nom"> <br>  
+                  <p style="color: red" id="erreurlastname"></p>
+                </li>
+                <li>
+                  Prénom: <input type="text" name="firstname" id="prenom"><br> 
+                  <p style="color: red" id="erreurfirstname"></p>
+                </li>
+                <li>
+                  Date de naissance: <input type="text" name="birthdate" id="date"><br>
+                  <p  style="color: red" id="e_birthdate"></p>
+                </li>
+                <li>
+                  Pseudo: <input type="text" class="0" name="username" id="pseudo"><br> 
+                  <p style="color: red" id="e_username"></p>
+                </li>
+                <li>
+                  Mot de passe: <input type="password" name="userpwd" id="mdp"><br>
+                  <p  style="color: red" id="e_password"></p>
+                </li>
+                <li>
+                  Mail: <input type="text" name="useremail" id="email"><br>
+                  <p style="color: red" id="mail"></p>
+                </li>
+              </ul> 
+              <p><input type="submit" value="Register" ><input type="reset" value="Clear" ></p>
+              
+            </form>
+      
+            <p id="erreur"></p>
+
+            <a href="index.html">Retour à la page d'accueil</a>
+
+          </div>
+
+      </div>
+
+      <script src="js/register.js"></script>
+
+      <footer>
+        <p>© 2021 ChastelIndustries, Inc. Tous droits réservés</p>
+      </footer>
+
+    </body>
+
+</html>

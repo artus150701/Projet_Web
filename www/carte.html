@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+        <title>Commencer Hearthstone</title>
+        <link rel="icon" type="image/png" href="pictures/logo.png">
+
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/presentation.css">
+
+    </head>
+    <body>
+
+        <header>
+
+            <h1>Hearthstone</h1>
+            <h2>Les différentes cartes</h2>
+
+        </header>
+
+        <nav>
+
+            <input type="checkbox" id="navBar" />
+            <label for="navBar" class="navBarLogo">
+              <img src=pictures/logoNav.png width="128" height="109" draggable="false" alt="Menu">
+            </label>
+
+            <div class="navBarList">
+
+              <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./classe.html">Les classes</a></li>
+                <li><a href="./register.html">Inscription</a></li>
+              </ul>
+
+            </div>
+
+        </nav>
+
+        <div class = "totalBox">
+
+            <div class = "box">
+
+                <h2>Présentation des cartes créatures et sorts:</h2>
+
+                <p>
+                    Les cartes principales d'hearthstone sont les cartes créatures qui vont réprésenter la puissance
+                    de chaque joueur, en effet, Hearthstone est un jeu de créatures basé sur le banc de créatures ("board"),
+                    c'est donc la pièce centrale de ce jeu, la puissance des créatures est définie par 3 statistiques
+                    la vie, l'attaque et le coût en mana de plus un indice de rareté permet d'avoir une idée de la puissance des cartes.<br>
+                    Cet indice de rareté:
+                </p>
+
+                <table>
+                    <tr>
+                      <th>Rareté</th>
+                      <th>Couleur</th>
+                      <th>Nombre de cartes max dans le deck</th>
+                      <th>Taux d'appariton dans les paquets</th>
+                    </tr>
+                    <tr>
+                      <td>Commune</td>
+                      <td>Grise</td>
+                      <td>2 cartes maximum</td>
+                      <td>En général, il y en a 4 par paquet</td>
+                    </tr>
+                    <tr>
+                      <td>Rare</td>
+                      <td>Bleue</td>
+                      <td>2 cartes maximum</td>
+                      <td>En général, il y en a 1 par paquet</td>
+                    </tr>
+                    <tr>
+                        <td>Epique</td>
+                        <td>Violet</td>
+                        <td>2 cartes maximum</td>
+                        <td>En général, il y en a 1 tous les 5 paquets</td>
+                    </tr>
+                    <tr>
+                        <td>Légendaire</td>
+                        <td>Orange</td>
+                        <td>1 carte maximum</td>
+                        <td>En général, il y en a 1 tous les 20 paquets</td>
+                    </tr>
+                  </table>
+
+                <p>
+                    Quand dans Hearthstone une créatures en attaque une autre elle fait baisser la vie de celle-ci en fonction
+                    de son attaque mais la créature attaquant perds aussi de la vie en fonction de l'attaque du monstre attaqué
+                    il faut donc faire bien attention lorsque que l'on attaque une créature.
+                    Enfin les créatures ont un certain nombre de mots clés qui leurs donnent des capacités particulières pour plus 
+                    d'informations au niveau du vocabulaire et des mots-clés je vous renvois sur ce très bon <a href="https://fr.millenium.gg/guide/145707.html">site</a>.<br>
+                    Voici une carte typique de créature:
+                </p>
+
+                <figure class="affichageCarte" id="CarteCreature">
+                    <img src="./pictures/Carte.png" alt="Carte creature">
+                    <figcaption>Une carte créature</figcaption>
+                </figure>
+
+                <p>
+                    Les cartes sorts s'utilisent directement de la main du joueur elles permettent d'infuencer directement sur le 
+                    board adverse ou bien sur le notre sans le prérequis de sommeil (voir contrainte 4 de l'<a href="./index.html">acceuil</a>).<br>
+                    Voici une carte sort:
+                </p>
+
+                <figure class="affichageCarte" id="CarteSort">
+                    <img src="./pictures/Sort.png" alt="Carte sort">
+                    <figcaption>Une carte sort</figcaption>
+                </figure>
+
+            </div>
+
+            <div class = "box">
+
+                <h2>Présentation des cartes armements et héros alternatifs:</h2>
+
+                <p>
+                    Les cartes armements s'utilisent directement de la main du joueur elles crééent une arme qui est équipées sur le héro ce qui lui
+                    permet d'attaquer directement le board adverse sans le prérequis de sommeil (voir contrainte 4 de l'<a href="./index.html">accueil</a>).
+                    Seulement il faut faire attention car cela entame directement vos points de vie et l'arme a une durabilité qui remplace
+                    ses point de vie on ne peut attaquer qu'à raison de la durabilité de l'arme de plus les armes peuvent avoir des mots-clés.<br>
+                    Voici une carte arme:
+                </p>
+
+                <figure class="affichageCarte" id="CarteArme">
+                    <img src="./pictures/Arme.png" alt="Carte arme">
+                    <figcaption>Une carte arme</figcaption>
+                </figure>
+
+                <p>
+                    Les héros alternatifs sont de puissantes cartes qui viennent le plus souvent effectuer un effet puissant en plus de changer votre héro
+                    qui obtient un nouveau <a href="./classe.html"><em>Pourvoir héroïque</em></a> plus puissant pouvant reverser le cours de la partie sur la longueur.
+                    Voici une carte héro alternatif: 
+                </p>
+                
+                <figure class="affichageCarte" id="CarteHero">
+                    <img src="./pictures/Hero.png" alt="Carte hero">
+                    <figcaption>Une carte héro alternatif</figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2021 ChastelIndustries, Inc. Tous droits réservés</p>
+        </footer>
+
+    </body>
+
+</html>

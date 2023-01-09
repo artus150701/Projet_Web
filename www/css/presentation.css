@@ -1,0 +1,477 @@
+/*Présentation de base*/
+
+a {
+    color: rgb(0, 0, 150);
+}
+
+a:hover{
+    text-decoration: underline;
+    color: rgb(0, 150, 150);
+    transition: all 100ms ease-in-out;
+}
+  
+
+h2 {
+    color:black;
+    font-size: 1.5rem;
+    margin: 6%;
+}
+
+p {
+    color: black;
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: auto;
+    margin: 4%;
+}
+
+figcaption {
+    color: black;
+    width: auto;
+    padding: 4px;
+    margin: auto;
+    text-align: center;
+    background-color: #fde9da3b;
+    font-size: 1rem;
+}
+
+ul {
+    color: black;
+    font-size: 1rem;
+    text-align:left;
+    text-justify: auto;
+    margin: 4%;
+}
+
+ol {
+    color: black;
+    font-size: 1rem;
+    text-align: left;
+    text-justify: auto;
+    margin: 4%;
+}
+
+table, th, td {
+    color: black;
+    border-collapse:separate;
+    margin: auto;
+    font-size: 1rem;
+    border: 1px solid rgb(120, 80, 10);
+    margin-bottom: 5%;
+    margin-top: 5%;
+    table-layout:auto;
+    width: auto;
+}
+
+header {
+    height: auto;
+    width: auto;
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(0,0,0,.9);
+    animation: HeaderShadowAnim 1.5s 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes HeaderShadowAnim {
+    from {text-shadow: 1px 1px 0px rgba(0,0,0,.6);} to {text-shadow: 4px 4px 4px rgba(0,0,0,.9);}
+}
+
+header h1 {
+    color: rgb(120, 80, 10);
+    height: 2rem;
+    font-size: 4rem;
+}
+
+header h2{
+    color:rgb(120, 80, 10);
+    height: 2rem;
+    font-size: 3rem;
+}
+
+footer {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+}
+
+footer p {
+    color: black;
+    height: 2rem;
+    margin: auto;
+    text-align: center;
+}
+
+form h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/*Paramétrage des images ajoutées*/
+
+.affichageCarte{
+    width: 50%;
+    margin: auto;
+}
+
+.affichageHero{
+    width: 30%;
+    margin: auto;
+}
+
+/* Style des boites petite technique trouvée sur  https://1linelayouts.glitch.me/  */
+
+.totalBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    flex: 1 1 300px;
+    border: 4px solid rgb(120, 80, 10);
+    background: rgb(230, 211, 168);
+    font-size: 2rem;
+    text-align: center;
+    height: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1.75%;
+}
+
+.box img{
+    width: 100%;
+}
+
+.box input {
+    width: auto;
+    height: auto;
+}  
+
+.boxInscription {
+
+    border: 4px solid rgb(120, 80, 10);
+    background: rgb(230, 211, 168);
+    font-size: 2rem;
+    text-align: center;
+    height: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+    .box table, th, td {
+        font-size: small;
+    }
+    
+}
+
+/*Présentation de la navBar*/
+
+.navBarList {
+    position: fixed;
+    top: 0;
+    left: -13%;
+    z-index: 0;
+    width: 10%;
+    height: 100%;
+    padding: 1%;
+    background-color: rgb(120, 80, 10);
+    transition: all 450ms ease-in-out;
+    z-index: 1;
+}
+   
+.navBarList ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.navBarList ul li {
+    cursor: pointer;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(244,244,244,0.4);
+    color: rgba(244,244,244,0.7);
+}
+  
+.navBarList ul li:last-child {
+    border-bottom: 0;
+}
+  
+.navBarList ul li:hover {
+    background-color: rgba(244, 244, 244, 0.11);
+}
+  
+.navBarList ul li a {
+    color: white;
+    text-decoration: none;
+}
+  
+.navBarLogo {
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    font-size: 24px;
+    z-index: 1;
+    transition: all 450ms ease-in-out;
+    z-index: 2;
+}
+  
+.navBarLogo img{
+    width: auto;
+}
+  
+#navBar {
+    display: none;
+}
+  
+#navBar:checked ~ .navBarList {
+    left: 0px;
+}
+  
+#navBar:checked + .navBarLogo {
+    left: 13%;
+}
+  
+  
+/* mediaQueries de la navBar*/
+  
+@media (max-width: 767px) {
+    .navBarList {
+      left:-25%;
+    }
+
+    .navBarList ul {
+      text-align: center;
+      max-width: 100%;
+      margin: 30px auto 0;
+    }
+    
+    .navBarLogo {
+      left: 0%;
+    }
+    
+    #navBar:checked ~ .navBarList {
+      width: 100%;
+    }
+    
+    #navBar:checked + .navBarLogo {
+      left: 87%;
+      color: #fafafa;
+    }
+}
+  
+@media screen  
+    and (max-width: 1100px) 
+    and (orientation: landscape) {
+    
+    .navBarList ul {
+      text-align: center;
+      max-width: 100%;
+      margin: 30px auto 0;
+    }
+    
+    .navBarLogo {
+      left: 0%;
+    }
+    
+    #navBar:checked ~ .navBarList {
+      width: 100%;
+    }
+    
+    #navBar:checked + .navBarLogo {
+      left: 87%;
+      color: #fafafa;
+    }
+}
+
+/*Création de la chatBox*/
+
+.container-chatbox {
+    position: fixed;
+    right: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbox {
+    height: 70%;
+    width: 40%;
+    background-color: rgb(230, 211, 168);
+    border: 4px solid rgb(120, 80, 10);
+    overflow: hidden;
+    position: fixed;
+    right: 3%;
+    bottom: 3%; 
+
+}
+
+/*Présentation a l'intèrieur de la chatBox*/
+
+.client {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 15%;
+    background-color: rgb(124, 92, 36);
+}
+
+.client img {
+    height: 75%;
+    margin-left: 2%;
+    margin-right: 0;
+    width: auto;
+}
+
+.client-info {
+    color: #fff;
+    padding: 15px;
+}
+
+.client-info p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.client-info h2{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.chats {
+    width: 100%;
+    height: 70%;
+    color: black;
+    position: relative;
+    font-size: 0.9rem;
+    overflow: scroll;
+}
+
+.client-chat {
+    width: 60%;
+    word-wrap: break-word;
+    background-color: rgba(120, 80, 10, 0.8);
+    padding: 7px 10px;
+    border-radius: 10px 10px 10px 0;
+    margin: 5px 2%;
+}
+
+.my-chat {
+    width: 60%;
+    word-wrap: break-word;
+    background-color: rgba(33, 67, 177, 0.8);
+    padding: 7px 10px;
+    border-radius: 10px 10px 0 10px;
+    margin: 5px 0 5px 35%;
+}
+
+.entreeChat {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 65px;
+    background-color: rgb(230, 211, 168);
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+}
+
+.entreeChat input{
+    width: calc(100% - 40px);
+    height: 100%;
+    background-color: white;
+    border-radius: 50px;
+    color: black;
+    font-size: 1.2rem;
+    padding: 0 15px;
+}
+
+/*Parametrage des différents boutons*/
+
+.boutonEnvoi {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(120, 80, 10);
+    overflow: hidden;
+    position: relative;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    align-content: center;
+}
+
+.boutonEnvoi:active {
+    transform: scale(0.85);
+}
+
+.boutonEnvoi img {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boutonChat {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.boutonChat img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+/*Message d'erreur*/
+
+.error {
+    width: 25%;
+    word-wrap: break-word;
+    background-color: rgb(230, 211, 168);
+    border:rgb(120, 80, 10);
+    padding: 8px 12px;
+    position: fixed;
+    top: 7%;
+    align-content: center;
+}
+
+/*mediaQueries pour la chat box*/
+
+@media (max-width: 1100px) {
+    .chatbox {
+        height: 75%;
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .chatbox {
+        height: 95%;
+        width: 95%;
+        right: auto;
+        bottom: auto;
+
+    }
+    .boutonChat {
+        width: 50px;
+        height: 50px;
+    }
+    .error {
+        width: 70%;
+        bottom: 15%;
+    }
+}

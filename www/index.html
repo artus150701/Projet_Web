@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+        <title>Commencer Hearthstone</title>
+        <link rel="icon" type="image/png" href="pictures/logo.png">
+
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/presentation.css">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Hearthstone</h1>
+            <h2>Apprendre les bases</h2>
+
+        </header>
+
+        <nav>
+            <input type="checkbox" id="navBar" />
+
+            <label for="navBar" class="navBarLogo">
+              <img src=pictures/logoNav.png width="128" height="109" draggable="false" alt="Menu">
+            </label>
+
+            <div class="navBarList">
+
+              <ul>
+                <li><a href="./carte.html">Les cartes</a></li>
+                <li><a href="./classe.html">Les classes</a></li>
+                <li><a href="./register.html">Inscription</a></li>
+              </ul>
+
+            </div>
+
+        </nav>
+
+        <div class="totalBox">
+
+            <div class="box">
+
+                <h2>Connectez vous:</h2>
+                	
+                <p>Attention cette option utilise du javascript.</p>
+                
+                <form action="htbin/login.py">
+                    <h3>Nom d'utilisateur</h3>
+                    <input type="text" name="username" value="" />
+                    <h3>Mot de passe</h3>
+                    <input type="password" name="userpwd" value="" />
+                    <p><input type="submit" value="Login" /><input type="reset" value="Clear" /></p>
+                </form>
+
+                <h2 id="PrésentationGen">Présentation du site et du jeu:</h2>
+
+                <p>
+                    L'objectif premier de ce site est de vous expliquer le jeu <em>Hearthstone</em> enfin
+                    que vous puissez commencer le jeu sur de bonnes base et pour vous éviter toute pertes de temps au 
+                    niveau du tutoriel du jeu nous sommes en plus équipé d'un chat pour répondre a toutes vos questions.<br>
+                    Tout d'abord, une petite présentation du jeu en lui même, Heartstone est un jeu de cartes en temps 
+                    réel en ligne créé par <em>Blizzard</em> qui peut être joué sur pc mais aussi sur mobile ! Le jeu 
+                    est téléchargable sur le <a href="https://playhearthstone.com/fr-fr">site officiel</a>. Plus 
+                    précisément, c'est un jeu en 1 contre 1, sans surprise pour un jeu de carte mais son point fort 
+                    est ailleurs et il est évident: c'est un jeu en ligne ce qui permet de créer des interactions
+                    uniques pour un jeu de cartes par exemple certaines cartes peuvent générer des cartes existantes dans le
+                    jeu aléatoirement ce qui est proprement impossible dans un jeu "physique" et c'est ce genre d'intéractions 
+                    qui lui donne son authenticité et donc sa popularité.<br>
+                    Dans une partie d'Hearthstone l'objectif est de réduire les points de vie du héros adverse à zéro (nous 
+                    introduirons la notion d'héros sur une autre <a href="./classe.html">page dédiée</a>).Pour cela chaques
+                    joueurs dispose de 30 cartes qui composent son "deck", ces cartes ont 4 différents types: créatures, sort,
+                    équipement et héros alternatifs (encore une fois la notion de cartes sera abordée sur une <a href="./carte.html">page dédiée</a>).
+                    Ces cartes disposent toutes d'un coût en mana qui augmente tour après tour jusqu'à un maximum de 10 qui est
+                    la seconde grosse particularité du jeu car cela permet 2 choses en une: 
+                </p>
+
+                <ul>
+                    <li>
+                        Tout d'abord cela permet de jouer qu'un certain nombre de cartes par tour ce qui créé une nouvelle dimension
+                        stratégique (économie de ressource, respect de la "courbe de mana" dans son deck ...).
+                    </li>
+                    <li>
+                        Mais aussi de gérer un certain niveau de puissance pour ces cartes en effet une carte qui coûte 10 cristaux sera 
+                        bien plus puissante qu'une carte qui en coûte 2.
+                    </li>
+                </ul>
+
+                <p>
+                    Pour finir la vraie particularité d'Hearthstone est que ce n'est pas a proprement parler un jeu de cartes à
+                    "collectionner" ce qui n'est pas commun quand on le compare a ses concurrents "physique" tel que Yu-Gi-Oh ou 
+                    encore Pokemon car nous avons dans Hearthstone la possibilité de créer nos cartes avec de la "poussière de
+                    cristal" donc potentiellement un joueur peut avoir la carte qu'il souhaite a condition d'avoir assez de poussière 
+                    en réserve. Enfin, malgrè tout ceci le jeu compore des options payantes pour acheter des paquets pour obtenir 
+                    des cartes plus rapidement mais il es t parfaitement possible de jouer en <em>"free to play"</em> pour 
+                    peu qu'on ait un minimum de patience.
+                </p>
+            
+            </div>
+
+            <div class="box">
+
+                <h2>Présentation du plateau de jeu et des contraintes:</h2>
+
+                <p>
+                    Comme expliqué plus <a href="#PrésentationGen">tôt</a>, Hearthstone est un jeu de monstre ce qui implique 
+                    qu'il y a un nombre de place limité sur le plateau de jeu, en effet dans une partie chaque joueurs ne peut avoir 
+                    que 7 créatures présentes sur le plateau en même temps, ces créatures peuvent attaquer les autres créatures ou 
+                    encore le héros adverse si il le peuvent.<br>
+                    Voici une image du plateau de jeu en question:
+                </p>
+
+                <figure id="Plateau">
+                    <img src="./pictures/Plateau.jpg" alt="Plateau">
+                    <figcaption>Voici le plateau de jeu annoté</figcaption>
+                </figure>
+
+                <p>
+                    De plus, il y a plusieurs contraintes imposée aux joueurs pour que comme dans tout jeu de cartes, il n'y ait pas 
+                    d'abus possibles il y a donc une liste de contraintes a respecter:
+                </p>
+
+                <ol>
+                    <li>
+                        Les joueurs ne peuvent pas avoir plus de dix cartes dans la main, les cartes piochées malgrè cette contraites est
+                        suprimmée du jeu, elle a "burn".
+                    </li>
+                    <li>
+                        Les joueurs peuvent avoir au maximum 10 cristaux de mana, ils partent de 1 et arrivent à 10 à raison de 1 nouveau 
+                        cristal tout leurs débuts de tours.
+                    </li>
+                    <li>
+                        Les joueurs n'ont que 30 cartes dans leurs deck de base pas un de plus ni une de moins.
+                    </li>
+                    <li>
+                        Les créatures, une fois posées, ne peuvent pas attaquer sur le tour.
+                    </li>
+                </ol>
+
+            </div>
+
+        </div>
+
+        <div class="container-chatbox">
+
+            <div class="chatbox" style="display: none;">
+
+              <div class="client">
+
+                <img src="./pictures/logoNav.png" alt="logo" draggable="false"/>
+
+                  <div class="client-info">
+
+                    <h2>Chat d'aide Hearthstone</h2>
+
+                  </div>
+
+              </div>
+      
+              <div class="chats">
+
+              </div>
+      
+              <div class="entreeChat">
+
+                <input type="text" placeholder="Entrer un message"/>
+
+                <button class="boutonEnvoi">
+                  <img src="./pictures/envoi.png" alt="send-boutton" draggable="false">
+                </button>
+
+              </div>
+
+            </div>
+      
+            <div class="boutonChat">  
+
+              <img src="./pictures/bouton.png" alt="chat box icon boutton" draggable="false">
+
+            </div>
+
+          </div>  
+
+        <footer>
+            <p>© 2021 ChastelIndustries, Inc. Tous droits réservés</p>
+        </footer>
+
+        <script src="js/login.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/chatbox.js"></script>
+        
+    </body>
+
+</html>
